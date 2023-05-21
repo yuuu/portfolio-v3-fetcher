@@ -1,0 +1,29 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
+    mini_mime (1.1.2)
+    mocha (2.0.2)
+      ruby2_keywords (>= 0.0.5)
+    multi_xml (0.6.0)
+    power_assert (2.0.3)
+    rexml (3.2.5)
+    rss (0.2.9)
+      rexml
+    ruby2_keywords (0.0.5)
+    test-unit (3.5.8)
+      power_assert
+
+PLATFORMS
+  arm64-darwin-20
+
+DEPENDENCIES
+  httparty
+  mocha
+  rss
+  test-unit
+
+BUNDLED WITH
+   2.4.10

@@ -1,0 +1,45 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  portfolio-v3-fetcher
+
+  Sample SAM Template for portfolio-v3-fetcher
+
+Globals:
+  Function:
+    Timeout: 600
+    MemorySize: 128
+
+Parameters:
+  AmplifyAppId:
+    Type: String
+  AmplifyAppEnv:
+    Type: String
+
+Resources:
+  FetcherFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      PackageType: Image
+      Policies:
+        - AmazonDynamoDBFullAccess
+      Architectures:
+        - x86_64
+      Events:
+        ScheduledEvent:
+          Type: Schedule
+          Properties:
+            Schedule: cron(* 20-13 * * ? *)
+      Environment:
+        Variables:
+          AMPLIFY_APP_ID: !Ref AmplifyAppId
+          AMPLIFY_APP_ENV: !Ref AmplifyAppEnv
+    Metadata:
+      DockerTag: ruby3.2-v1
+      DockerContext: ./fetcher
+      Dockerfile: Dockerfile
+
+Outputs:
+  FetcherFunction:
+    Description: "Fetcher Lambda Function ARN"
+    Value: !GetAtt FetcherFunction.Arn
