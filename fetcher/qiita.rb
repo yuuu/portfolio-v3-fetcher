@@ -26,10 +26,10 @@ class Qiita
         title: item['title'],
         body: item['body'][0...100] + '...',
         publishedAt: Time.parse(item['created_at']).to_i,
-        image: image,
+        imageUrl: image,
         link: item['url'],
-        createdAt: Time.now.iso8601,
-        updatedAt: Time.now.iso8601,
+        createdAt: Time.now.utc.iso8601,
+        updatedAt: Time.now.utc.iso8601,
         _lastChangedAt: Time.now.to_i * 1000,
         _version: 1,
         __typename: 'Article'

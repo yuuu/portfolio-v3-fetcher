@@ -14,7 +14,7 @@ SITES = [
 
 class Time
   def iso8601
-    strftime('%Y-%m-%dT%H:%M:%S.%L%z')
+    strftime('%Y-%m-%dT%H:%M:%S.%LZ')
   end
 end
 
