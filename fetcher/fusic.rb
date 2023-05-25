@@ -37,7 +37,8 @@ class Fusic
         updatedAt: Time.now.utc.iso8601,
         _lastChangedAt: Time.now.to_i * 1000,
         _version: 1,
-        __typename: 'Article'
+        __typename: 'Article',
+        type: 'Article'
       })
     end
   end

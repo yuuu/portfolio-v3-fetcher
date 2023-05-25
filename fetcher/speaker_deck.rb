@@ -33,7 +33,8 @@ class SpeakerDeck
         updatedAt: Time.now.utc.iso8601,
         _lastChangedAt: Time.now.to_i * 1000,
         _version: 1,
-        __typename: 'Slide'
+        __typename: 'Slide',
+        type: 'Slide'
       })
     end
   end
