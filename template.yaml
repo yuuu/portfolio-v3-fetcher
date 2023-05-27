@@ -29,7 +29,7 @@ Resources:
         ScheduledEvent:
           Type: Schedule
           Properties:
-            Schedule: cron(0 20-13 * * ? *)
+            Schedule: cron(0 23 * * ? *)
       Environment:
         Variables:
           AMPLIFY_APP_ID: !Ref AmplifyAppId
