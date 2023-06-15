@@ -4,5 +4,6 @@ gem "faraday"
 gem "nokogiri"
 gem "rss"
 gem "sanitize"
+gem "racc", '~> 1.6.2'
 
 ruby '~> 3.2.0'

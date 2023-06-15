@@ -8,7 +8,7 @@ require_relative './speaker_deck'
 SITES = [
   [Qiita, 'https://qiita.com/api/v2/users/Y_uuu/items?per_page=100', 'Article'],
   [Zenn, 'https://zenn.dev/y_uuu/feed', 'Article'],
-  [Fusic, 'https://tech.fusic.co.jp/feed/', 'Article'],
+  [Fusic, 'https://tech.fusic.co.jp/rss.xml', 'Article'],
   [SpeakerDeck, 'https://speakerdeck.com/yuuu.atom', 'Slide'],
 ]
 
